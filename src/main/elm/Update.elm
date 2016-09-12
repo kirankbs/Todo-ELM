@@ -47,4 +47,4 @@ update msg model =
                 { model | todo = updatedTodo }
 
         Filter filterState ->
-            model
+            { model | filter = filterState }

@@ -1,0 +1,30 @@
+var _user$project$Views_FilterItemView$filterItemView = F2(
+	function (model, filterState) {
+		return A2(
+			_elm_lang$html$Html$li,
+			_elm_lang$core$Native_List.fromArray(
+				[]),
+			_elm_lang$core$Native_List.fromArray(
+				[
+					A2(
+					_elm_lang$html$Html$a,
+					_elm_lang$core$Native_List.fromArray(
+						[
+							_elm_lang$html$Html_Attributes$classList(
+							_elm_lang$core$Native_List.fromArray(
+								[
+									{
+									ctor: '_Tuple2',
+									_0: 'selected',
+									_1: _elm_lang$core$Native_Utils.eq(model.filter, filterState)
+								}
+								])),
+							_elm_lang$html$Html_Attributes$href('#')
+						]),
+					_elm_lang$core$Native_List.fromArray(
+						[
+							_elm_lang$html$Html$text(
+							_elm_lang$core$Basics$toString(filterState))
+						]))
+				]));
+	});

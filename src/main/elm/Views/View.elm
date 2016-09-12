@@ -9,6 +9,8 @@ import Model exposing (..)
 import Msg exposing (..)
 import Todo.Todo exposing (..)
 import Todo.TodoView exposing (..)
+import Todo.TodoUnionTypes exposing (..)
+import Views.FilterItemView exposing (..)
 
 
 is13 : Int -> Result String ()
@@ -35,6 +37,18 @@ view model =
             , section [ class "main" ]
                 [ ul [ class "todo-list" ]
                     (List.map todoView model.todos)
+                ]
+            , footer [ class "footer"] 
+                [ span [ class "todo-count" ]
+                    [ strong [] [ text (toString (List.length model.todos)) ]
+                    , text " items left "
+                    ]
+                , ul [ class "filters" ] 
+                    [ filterItemView model All
+                    , filterItemView model Active
+                    , filterItemView model Completed
+                    ]
+                , button [ class "clear-completed"] [ text "clear completed"]
                 ]
             ]
         ]

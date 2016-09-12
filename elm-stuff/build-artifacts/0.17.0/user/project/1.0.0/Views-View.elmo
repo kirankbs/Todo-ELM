@@ -78,6 +78,57 @@ var _user$project$Views_View$view = function (model) {
 										_elm_lang$html$Html_Attributes$class('todo-list')
 									]),
 								A2(_elm_lang$core$List$map, _user$project$Todo_TodoView$todoView, model.todos))
+							])),
+						A2(
+						_elm_lang$html$Html$footer,
+						_elm_lang$core$Native_List.fromArray(
+							[
+								_elm_lang$html$Html_Attributes$class('footer')
+							]),
+						_elm_lang$core$Native_List.fromArray(
+							[
+								A2(
+								_elm_lang$html$Html$span,
+								_elm_lang$core$Native_List.fromArray(
+									[
+										_elm_lang$html$Html_Attributes$class('todo-count')
+									]),
+								_elm_lang$core$Native_List.fromArray(
+									[
+										A2(
+										_elm_lang$html$Html$strong,
+										_elm_lang$core$Native_List.fromArray(
+											[]),
+										_elm_lang$core$Native_List.fromArray(
+											[
+												_elm_lang$html$Html$text(
+												_elm_lang$core$Basics$toString(
+													_elm_lang$core$List$length(model.todos)))
+											])),
+										_elm_lang$html$Html$text(' items left ')
+									])),
+								A2(
+								_elm_lang$html$Html$ul,
+								_elm_lang$core$Native_List.fromArray(
+									[
+										_elm_lang$html$Html_Attributes$class('filters')
+									]),
+								_elm_lang$core$Native_List.fromArray(
+									[
+										A2(_user$project$Views_FilterItemView$filterItemView, model, _user$project$Todo_TodoUnionTypes$All),
+										A2(_user$project$Views_FilterItemView$filterItemView, model, _user$project$Todo_TodoUnionTypes$Active),
+										A2(_user$project$Views_FilterItemView$filterItemView, model, _user$project$Todo_TodoUnionTypes$Completed)
+									])),
+								A2(
+								_elm_lang$html$Html$button,
+								_elm_lang$core$Native_List.fromArray(
+									[
+										_elm_lang$html$Html_Attributes$class('clear-completed')
+									]),
+								_elm_lang$core$Native_List.fromArray(
+									[
+										_elm_lang$html$Html$text('clear completed')
+									]))
 							]))
 					]))
 			]));
