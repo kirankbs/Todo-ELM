@@ -1,0 +1,3 @@
+var _user$project$Todo_TodoUnionTypes$Completed = {ctor: 'Completed'};
+var _user$project$Todo_TodoUnionTypes$Active = {ctor: 'Active'};
+var _user$project$Todo_TodoUnionTypes$All = {ctor: 'All'};

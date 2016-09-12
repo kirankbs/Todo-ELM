@@ -1,0 +1,16 @@
+var _user$project$Msg$Filter = function (a) {
+	return {ctor: 'Filter', _0: a};
+};
+var _user$project$Msg$UpdateField = function (a) {
+	return {ctor: 'UpdateField', _0: a};
+};
+var _user$project$Msg$Delete = function (a) {
+	return {ctor: 'Delete', _0: a};
+};
+var _user$project$Msg$Uncomplete = function (a) {
+	return {ctor: 'Uncomplete', _0: a};
+};
+var _user$project$Msg$Complete = function (a) {
+	return {ctor: 'Complete', _0: a};
+};
+var _user$project$Msg$Add = {ctor: 'Add'};

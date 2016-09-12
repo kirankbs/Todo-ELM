@@ -1,0 +1,4 @@
+var _user$project$Model$Model = F4(
+	function (a, b, c, d) {
+		return {todos: a, todo: b, filter: c, nextIdentifier: d};
+	});

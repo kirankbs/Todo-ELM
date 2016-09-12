@@ -1,0 +1,9 @@
+var _user$project$Todo_Todo$newTodo = {title: '', completed: false, editing: false, identifier: 0};
+var _user$project$Todo_Todo$addTodo = F2(
+	function (todo, todos) {
+		return _elm_lang$core$Native_Utils.eq(todo, _user$project$Todo_Todo$newTodo) ? todos : A2(_elm_lang$core$List_ops['::'], todo, todos);
+	});
+var _user$project$Todo_Todo$Todo = F4(
+	function (a, b, c, d) {
+		return {title: a, completed: b, editing: c, identifier: d};
+	});

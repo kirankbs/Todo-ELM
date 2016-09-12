@@ -1,0 +1,4 @@
+var _user$project$Todo$Todo = F3(
+	function (a, b, c) {
+		return {title: a, completed: b, editing: c};
+	});

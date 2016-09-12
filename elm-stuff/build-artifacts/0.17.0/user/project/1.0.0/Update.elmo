@@ -1,0 +1,51 @@
+var _user$project$Update$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		switch (_p0.ctor) {
+			case 'Add':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						todos: A2(_user$project$Todo_Todo$addTodo, model.todo, model.todos),
+						todo: _elm_lang$core$Native_Utils.update(
+							_user$project$Todo_Todo$newTodo,
+							{identifier: model.nextIdentifier}),
+						nextIdentifier: model.nextIdentifier + 1
+					});
+			case 'Complete':
+				var _p1 = _p0._0;
+				var updateTodo = function (thisTodo) {
+					return _elm_lang$core$Native_Utils.eq(thisTodo.identifier, _p1.identifier) ? _elm_lang$core$Native_Utils.update(
+						_p1,
+						{completed: true}) : thisTodo;
+				};
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						todos: A2(_elm_lang$core$List$map, updateTodo, model.todos)
+					});
+			case 'Uncomplete':
+				var updateTodo = function (thisTodo) {
+					return _elm_lang$core$Native_Utils.eq(thisTodo.identifier, _p0._0.identifier) ? _elm_lang$core$Native_Utils.update(
+						thisTodo,
+						{completed: false}) : thisTodo;
+				};
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						todos: A2(_elm_lang$core$List$map, updateTodo, model.todos)
+					});
+			case 'Delete':
+				return model;
+			case 'UpdateField':
+				var todo = model.todo;
+				var updatedTodo = _elm_lang$core$Native_Utils.update(
+					todo,
+					{title: _p0._0});
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{todo: updatedTodo});
+			default:
+				return model;
+		}
+	});
